@@ -1,8 +1,9 @@
-from load_data import load_image, extract_points, delaunay_triangulation
+from Triangulation_classique import load_image, extract_points, delaunay_triangulation
 import numpy as np
 from collections import defaultdict
 import matplotlib.pyplot as plt
 import matplotlib.colors as mcolors
+
 
 def compute_triangle_size(points, simplices):
     sizes = []
@@ -15,6 +16,7 @@ def compute_triangle_size(points, simplices):
         )
         sizes.append((perimeter, i))
     return sizes
+
 
 def sort_triangles_by_size(triangle_sizes):
     return [index for _, index in sorted(triangle_sizes, reverse=True)]

@@ -1,4 +1,4 @@
-from load_data import load_image, extract_points, delaunay_triangulation
+from Triangulation_classique import load_image, extract_points, delaunay_triangulation
 from coloriage_initial import propagate_colors
 import numpy as np
 import matplotlib.pyplot as plt
